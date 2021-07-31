@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+
+    background-image: url('./img/imgjpg.jpg');
+    object-fit: fill;
+    height: 95vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Page header & Buttons styling start */
+#top-container {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+#result {
+    margin: 10;
+}
+
+/* Button styling start  */
+#btn-deck, .btn-draw {
+    padding: 10px 25px;
+    font-size: 1rem;
+    background:rgb(255, 255, 81);
+    color: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-draw {
+    width: 25%;
+}
+
+.disabled {
+    background: grey;
+    color: white;
+    cursor: not-allowed;
+}
+/* Button styling end  */
+
+#top-container>span {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    
+    
+}
+/* Page header & Buttons styling end */
+
+/* Card styling start */
+#card-container {
+    display: grid;
+    width: 120px;
+    height: 350px;
+}
+
+#card1-container, #card2-container {
+    width: 120px;
+    height: 167px;
+
+    border: 2px black solid;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 0;
+
+}
+
+#cards {
+    width: 120px;
+    height: calc(120 * 5/7);
+}
+/* Card styling end */
+
+
+/* Media Queries to add responsiveness */
+@media (max-width: 1350px) {
+    #top-container {
+        width: 50%;
+    }
+
+    .btn-draw {
+        width: 50%;
+    }
+}
+
+@media (max-width: 700px){
+    #top-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #btn-deck {
+        width: 75%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 400px){
+    #top-container>span {
+        font-size: 1rem;
+    }
+
+    #btn-deck {
+        width: 100%;
+    }
+}
